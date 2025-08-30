@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Formatter Tool</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>HTML Formatter Tool</h1>
+            <p class="description">Format and beautify your HTML code to make it more readable and organized with proper indentation</p>
+        </div>
+        
+        <div class="editor-container">
+            <div class="editor-panel">
+                <div class="panel-header">
+                    <i class="fas fa-code"></i>
+                    <span class="panel-title">Input HTML</span>
+                </div>
+                <textarea id="input-code" placeholder="Paste your HTML code here..."><!DOCTYPE html>
+<html>
+<head>
+<title>Sample Page</title>
+<meta charset="utf-8">
+</head>
+<body>
+<div class="container">
+<h1>Welcome to HTML Formatter</h1>
+<p>This tool will format your HTML code</p>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ul>
+</div>
+</body>
+</html></textarea>
+                <div class="code-info">
+                    <span id="input-lines">Lines: 0</span>
+                    <span id="input-chars">Characters: 0</span>
+                </div>
+            </div>
+            
+            <div class="editor-panel">
+                <div class="panel-header">
+                    <i class="fas fa-check-circle"></i>
+                    <span class="panel-title">Formatted HTML</span>
+                </div>
+                <textarea id="output-code" readonly></textarea>
+                <div class="code-info">
+                    <span id="output-lines">Lines: 0</span>
+                    <span id="output-chars">Characters: 0</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="options">
+            <div class="option-group">
+                <div class="option-title">
+                    <i class="fas fa-indent"></i>
+                    Indentation
+                </div>
+                <div class="option-controls">
+                    <div class="radio-group">
+                        <input type="radio" id="spaces" name="indent-type" value="spaces" checked>
+                        <label for="spaces">Spaces</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="tabs" name="indent-type" value="tabs">
+                        <label for="tabs">Tabs</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="option-group">
+                <div class="option-title">
+                    <i class="fas fa-ruler-horizontal"></i>
+                    Indent Size
+                </div>
+                <div class="option-controls">
+                    <div class="radio-group">
+                        <input type="radio" id="size-2" name="indent-size" value="2">
+                        <label for="size-2">2 spaces</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="size-4" name="indent-size" value="4" checked>
+                        <label for="size-4">4 spaces</label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="option-group">
+                <div class="option-title">
+                    <i class="fas fa-broom"></i>
+                    Formatting Options
+                </div>
+                <div class="option-controls">
+                    <div class="radio-group">
+                        <input type="checkbox" id="wrap-attributes" checked>
+                        <label for="wrap-attributes">Wrap attributes</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="checkbox" id="preserve-newlines">
+                        <label for="preserve-newlines">Preserve newlines</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="buttons">
+            <button id="format-btn">
+                <i class="fas fa-magic"></i>
+                Format HTML
+            </button>
+            <button id="copy-btn" disabled>
+                <i class="far fa-copy"></i>
+                Copy Formatted
+            </button>
+            <button id="clear-btn">
+                <i class="fas fa-broom"></i>
+                Clear All
+            </button>
+        </div>
+        
+        <div class="status" id="status">
+            <i class="fas fa-info-circle"></i>
+            <span id="status-text">Ready to format. Paste your HTML code and click "Format HTML".</span>
+        </div>
+    </div>
+      <script src="script.js"></script>
+  </body>
+</html>
